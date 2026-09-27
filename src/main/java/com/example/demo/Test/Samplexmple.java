@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Samplexmple {
-	@GetMapping("test")
+	@GetMapping("/test")
 	public String get() {
 		System.out.println("Hello");
 		return "Hello + Hello";
