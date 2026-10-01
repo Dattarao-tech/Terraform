@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workdemo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: workdemo
+  template:
+    metadata:
+      labels:
+        app: workdemo
+    spec:
+      containers:
+      - name: workdemo
+        image: dattaraodeosarkar/com-workdemo:1.0
+        ports:
+        - containerPort: 8080
